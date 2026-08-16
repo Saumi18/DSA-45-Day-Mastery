@@ -1,5 +1,7 @@
 # Re-solve 3Sum
 
+# SOLVED
+
 **Day:** 06
 
 ## What to do
