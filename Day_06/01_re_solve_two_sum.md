@@ -1,5 +1,5 @@
 # Re-solve Two Sum
-
+# SOLVED
 **Day:** 06
 
 ## What to do
