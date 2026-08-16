@@ -1,5 +1,7 @@
 # Watch NeetCode Two Pointers
 
+# WATCHED
+
 **Day:** 06
 
 ## What to do
