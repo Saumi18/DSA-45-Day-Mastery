@@ -2,15 +2,30 @@
 // Problem: Buy & Sell Stock
 //
 // My notes:
-// Pattern: 
-// Time: 
-// Space: 
+// Pattern: Two ptrs
+// Time: O(n)
+// Space: O(n)
 
-
-#include <bits/stdc++.h>
-using namespace std;
 
 class Solution {
 public:
-    // TODO: Implement Buy & Sell Stock
+    int maxProfit(vector<int>& prices) {
+        int n = prices.size();
+        int l = 0;
+        int r = 1;
+        int maxProfit = 0;
+        while(r<n){
+            if(prices[l]<prices[r]){
+                int profit = prices[r] - prices[l];
+                maxProfit = max(maxProfit,profit);
+                r++;
+            }
+            else if(prices[l]>=prices[r]){
+                l = r;
+                r++;
+            }
+        }
+        return maxProfit;
+    }
 };
+
