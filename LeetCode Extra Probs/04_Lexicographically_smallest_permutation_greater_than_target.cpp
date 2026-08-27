@@ -1,5 +1,5 @@
 // Topic: Greedy + Backtracking
-// Problem: Lexicographically Smallest Permutation Greater Than Target
+// Problem: (3720)Lexicographically Smallest Permutation Greater Than Target
 //
 // My notes:
 // Pattern: Frequency Array → Greedy Matching → Backtrack
