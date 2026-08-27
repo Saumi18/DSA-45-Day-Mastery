@@ -6,7 +6,9 @@
 // Time: O(n)
 // Space: O(1)
 
+// There are two approaches - One pass and two pass
 
+// Two pass approach
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
@@ -35,5 +37,42 @@ public:
         // Skip t1
         temp->next = t2;
         return head;
+    }
+};
+
+// One pass :
+
+/*## Intuition
+
+Keep `fast` n nodes ahead of `slow`.
+When `fast` reaches the end, `slow` is exactly before the node to remove.
+
+A dummy node is used so removing the head works the same way as removing any other node.
+
+## Complexity
+
+- Time: O(n)
+- Space: O(1)*/
+    
+class Solution {
+public:
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        // Dummy handles the case where we remove the head
+        ListNode* dummy = new ListNode(0, head);
+        ListNode* slow = dummy;
+        ListNode* fast = dummy;
+
+        // Move fast n nodes ahead
+        for (int i = 0; i < n; i++) {
+            fast = fast->next;
+        }
+        // Move both until fast reaches the last node
+        while (fast->next != NULL) {
+            slow = slow->next;
+            fast = fast->next;
+        }
+        // slow->next is the node to remove
+        slow->next = slow->next->next;
+        return dummy->next;
     }
 };
