@@ -14,11 +14,12 @@
 // Approach 2: Floyd's Cycle Detection
 // Treat the array like a linked list:
 // index -> nums[index]
+// here the pointers slow and fast represent nodes which themsef are the numbers in nums.
 // The duplicate creates a cycle.
 // Use slow (1 step) and fast (2 steps) pointers to find the cycle.
 // First find the meeting point, then reset slow to nums[0].
-// Move both one step until they meet again — that node is the duplicate.
-//
+// Move both fast and slow one step until they meet again — that node is the duplicate.
+// Return the slow pointer.
 // Time: O(n)
 // Space: O(1)
 
