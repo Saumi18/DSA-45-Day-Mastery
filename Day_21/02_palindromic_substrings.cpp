@@ -37,8 +37,8 @@ public:
 // uniformly. p[i] stores the palindrome radius at each center. Use the
 // mirror of i within the current rightmost palindrome to avoid repeated work.
 // Every radius contributes exactly that many palindromic substrings.
-// So, add p[i] to the answer for every center.
-//
+// So, add (p[i]+1)/2 to the answer for every center as p[i] will have radius with "#" char also.
+// So, DONT directly add p[i]
 // Time: O(n)
 // Space: O(n)
 
@@ -70,7 +70,7 @@ public:
                 center = i;
                 right = i + p[i];
             }
-            ans += p[i];
+            ans += (p[i]+1)/2;
         }
         return ans;
     }
