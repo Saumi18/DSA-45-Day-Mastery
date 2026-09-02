@@ -2,15 +2,22 @@
 // Problem: Sum of Two Integers
 //
 // My notes:
-// Pattern: 
-// Time: 
-// Space: 
+// Pattern: Bit Manipulation + XOR + AND
+// Idea: XOR gives addition without carry. AND finds the carry bits.
+// Shift the carry left by 1 and repeat until there is no carry.
+//
+// Time: O(1)
+// Space: O(1) 
 
-
-#include <bits/stdc++.h>
-using namespace std;
 
 class Solution {
 public:
-    // TODO: Implement Sum of Two Integers
+    int getSum(int a, int b) {
+        while (b != 0) {
+            int carry = (a & b) << 1;
+            a ^= b;
+            b = carry;
+        }
+        return a;
+    }
 };
