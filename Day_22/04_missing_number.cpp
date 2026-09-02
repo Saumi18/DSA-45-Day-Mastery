@@ -2,15 +2,23 @@
 // Problem: Missing Number
 //
 // My notes:
-// Pattern: 
-// Time: 
-// Space: 
+// Pattern: XOR
+// Idea: XOR all numbers from 0 to n with all elements of nums.
+// Every number that appears twice cancels because x ^ x = 0.
+// Only the missing number remains.
+//
+// Time: O(n)
+// Space: O(1)
 
-
-#include <bits/stdc++.h>
-using namespace std;
 
 class Solution {
 public:
-    // TODO: Implement Missing Number
+    int missingNumber(vector<int>& nums) {
+        int n = nums.size();
+        int xorr = n;
+        for (int i = 0; i < n; i++) {
+            xorr ^= i ^ nums[i];
+        }
+        return xorr;
+    }
 };
