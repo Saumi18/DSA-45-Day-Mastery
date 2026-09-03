@@ -1,5 +1,5 @@
 // Topic: Parity & Bit Manipulation
-// Problem: Construct Uniform Parity Array II
+// Problem: (3876) Construct Uniform Parity Array II
 
 // My notes:
 // Pattern: Parity + Minimum Element
