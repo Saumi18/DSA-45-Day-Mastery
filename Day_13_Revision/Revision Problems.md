@@ -12,9 +12,11 @@
 
 5. [Minimum Interval to Include Each Query](https://neetcode.io/problems/minimum-interval-including-query/question)
 
-6. [Generate Parentheses](https://neetcode.io/problems/generate-parentheses/question)
+6. [Valid Parenthesis String — LeetCode 678](https://leetcode.com/problems/valid-parenthesis-string/)
 
-7. [Car Fleet](https://neetcode.io/problems/car-fleet/question)
+7. [Generate Parentheses](https://neetcode.io/problems/generate-parentheses/question)
 
-8. [Largest Rectangle in Histogram](https://neetcode.io/problems/largest-rectangle-in-histogram/question)
+8. [Car Fleet](https://neetcode.io/problems/car-fleet/question)
+
+9. [Largest Rectangle in Histogram](https://neetcode.io/problems/largest-rectangle-in-histogram/question)
       
